@@ -296,6 +296,18 @@ svg {
   vertical-align: middle;
 }
 
+.w-100{
+  height: 710px;
+}
+
+.gallery-item {
+  height: 440px;
+}
+
+.nina-img {
+  height: 430px;
+}
+
 table {
   caption-side: bottom;
   border-collapse: collapse;
@@ -3920,6 +3932,7 @@ textarea.form-control-lg {
 
 .nav-link {
   display: block;
+  cursor: pointer;
   padding: 0.5rem 1rem;
   color: #0d6efd;
   text-decoration: none;
