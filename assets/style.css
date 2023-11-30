@@ -71,6 +71,33 @@ body {
 	width: 100%;
 
 }
+
+.right {
+	max-width: 392px;
+	max-height: 392px;
+  }
+  
+  .camera-picture {
+	height: 100%;
+	object-fit: cover;
+  }
+  
+  .left {
+	max-width: 400px;
+	max-height: 400px;
+  }
+  
+  .nina-img {
+	height: 100% ;
+	object-fit: cover;
+  }
+  
+  .instagram {
+	width: 20px;
+	height: 20px;
+  }
+
+  
 #about-me {
 	flex: 2
 }
