@@ -6,6 +6,12 @@ body {
 	font-family: 'Inter';
 	font-style: normal;
 }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
 .top-header {
 	background-color: white;
 	position: sticky;
@@ -22,32 +28,66 @@ body {
 	font-size: 26px;
 }
 
+.name {
+	height: auto;
+	width: 173px;
+}
+
 .nav ul {
 	display: flex;
 	list-style-type: none;
 	font-size: 14px;
 	margin-bottom: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
 .nav li {
 	padding-inline: 10px;
+	width: auto;
 }
+
 
 .nav a {
 	text-decoration: none;
-	color: #000
+	color: #000;
+}
+
+a {
+	width: 60px;
+	height: 17px;
 }
 
 .social-link img {
 	width: 20px;
 }
 
+#gallery {
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.carousel-control-prev-icon {
+	width: 32px;
+	height: 32px;
+}
+
+
+.carousel-control-next-icon {
+	width: 32px;
+	height: 32px;
+}
+/*
 #about {
 	display: flex;
 	background-color: #F6D2B8;
-	padding-inline: 100px;
-	padding-block: 100px;
 	position: relative;
+	height: auto;
 }
 
 .picture.left::before {
@@ -60,7 +100,7 @@ body {
 	left: 0;
 	z-index: -1;
 }
-
+*/
 .picture {
 	flex: 1;
 	margin: 0 20px;
@@ -86,21 +126,16 @@ body {
 	max-width: 400px;
 	max-height: 400px;
   }
+  */
   
   .nina-img {
 	height: 100% ;
 	object-fit: cover;
   }
   
-  .instagram {
-	width: 20px;
-	height: 20px;
-  }
 
-  
-#about-me {
-	flex: 2
-}
+/*  
+
 .about-me__title {
 	margin-top: 1em;
 	margin-bottom: 60px;
@@ -112,21 +147,37 @@ body {
 	font-style: italic;
 	width: 60%;
 }
+
+.about-me {
+	height: auto;
+	width: 232px;
+}
+
 #about-me p {
 	width: 80%;
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
+*/
+
 .title{
 	text-align: center;
 	padding-block: 2em;
+	width: 200px;
 }
+
+.gallery {
+	height: auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .gallery .nav {
 	justify-content: center;
 }
+
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #fff;
 	background-color: #BEB45A;
@@ -135,6 +186,7 @@ body {
 .nav-pills .nav-link {
 	color: #000
 }
+
 .item-column {
 	position: relative;
 	margin-bottom: 0 !important;
@@ -146,13 +198,20 @@ body {
 	padding-bottom: 100%;
 
 }
+
 .gallery-item {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	padding: .5em;
+	padding: 0.5em;
 }
+
+.gallery-items-row {
+	width: 100%;
+	display: flex;
+}
+
 .mg-prev, .mg-next {
 	width: 30px;
 	height: 30px;
@@ -161,6 +220,13 @@ body {
 	align-items: center;
 	display: flex;
 	font-size: 24px;
+}
+
+.mg-prev {
+	margin-left: 30px;
+}
+.mg-next {
+	margin-right: 30px;
 }
 
 .quote {
@@ -197,6 +263,7 @@ body {
 	left: 0;
 	z-index: 0;
 }
+
 
 #services .container {
 	justify-content: space-between;
@@ -271,6 +338,7 @@ input[type="submit"] {
 	padding: .5em 1em
 }
 
+/*
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
@@ -280,6 +348,12 @@ input[type="submit"] {
 		width: 100%;
 		height: 100%;
 	}
+
+	#about-me {
+		width: 100%;
+		height: 100%;
+	}
+
 	.about-me__title {
 		margin-top: 0;
 		margin-bottom: 1em;
@@ -289,27 +363,34 @@ input[type="submit"] {
 	}
 }
 
+*/
+/*
 @media all and (max-width: 1000px) {
 	#about{
 		flex-direction: column;
+		padding: 100px 100px;
+	}
 
+	#about, #about-me, .about-me__introduction, .about-me__text, .about-me__title {
+		max-width: 800px;
+		height: auto;
 	}
-	.picture {
-		width: 50%;
-	}
+
 	.picture.left::before {
 		width: 100%;
-		height: 30%;
+		height: 20%;
 		position: absolute;
 		bottom: auto;
 		top: 0;
 		left: 0;
 		z-index: -1;
 	}
+	
 	.about-me__title{
 		text-align: center;
 		margin-top: 1em;
 	}
+	
 	#services .container {
 		flex-direction: column;
 	}
@@ -346,12 +427,36 @@ input[type="submit"] {
 		right: 0;
 		z-index: -1;
 	}
+	
 }
+
+@media (max-width: 575px) {
+	#gallery {
+		width: 100%;
+		height: auto;
+	}
+	.gallery {
+		flex-direction: column;
+	}
+	.gallery-items-row {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+*/
+.modal {
+	width: auto;
+	margin: auto;
+}
+
+
 
 @media all and (max-width: 650px) {
 	.top-header {
 		flex-direction: column;
 		padding-inline: 0;
+		justify-content: center;
 	}
 	.top-header .nav, .top-header .nav ul {
 		width: 100%;
@@ -362,6 +467,60 @@ input[type="submit"] {
 		padding-block: 1em;
 		text-align: center;
 	}
+	/*
+	#about {
+		padding: 2em;
+	}
+
+	#about, #about-me, .about-me__introduction, .about-me__text, .about-me__title {
+		max-width: 450.4px;
+		height: auto;
+	}
+
+	.about-me__title {
+		margin: 30px auto;
+	}
+
+	#about-link {
+		height: 60px;
+	}
+
+	*/
+
+	.nav ul {
+		height: auto;
+	}
+
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.carousel-control-prev-icon, .carousel-control-next-icon {
+		width: 32px;
+		height: 32px;
+	}
+
+	.carousel-control-next, .carousel-control-prev {
+		width: 32px;
+		height: 32px;
+		top: 70px;
+	}
+
+	.carousel-control-next {
+		margin-right: 20px;
+	}
+
+	.carousel-control-prev {
+		margin-left: 20px;
+	}
+
+	.modal {
+		max-width: 100%;
+	}
+	
+	/*
 	.picture.left::before, .picture.right::before {
 		height: 150px;
 	}
@@ -371,20 +530,20 @@ input[type="submit"] {
 	.service {
 		max-width: 90%;
 	}
+	*/
+	/*
 	#about, #contact {
 		max-width: 650px;
 		height: auto;
-		padding-inline: 2em;
-		padding-block: 2em;
 	}
+	/*
 	form {
 		width: 100%;
 	}
+		
 	.picture {
 		width: 80%;
 	}
-
-	.about-me__title, .about-me__introduction, .about-me__text {
-		width: 256px;
-	}
+	*/
+	
 }
